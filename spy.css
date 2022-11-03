@@ -1,0 +1,157 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    transition: all .2s ease-out;
+}
+.navbar-brand{
+    color: white;
+}
+.navbar ul li a{
+    color: white;
+    font-size: 20px;
+}
+.navbar{
+    padding: 10px 10rem;
+    position: relative;
+}
+.nav-dropdown-icon{
+    font-size: 20px;
+    display: none;
+    transform: rotate(180deg);
+    transition: 1s;
+}
+.dropdown-nav{
+    background-color: aqua;
+    display: none;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    position: absolute;
+}
+.nav li a{
+    font-size: 20px;
+    color: white;
+}
+
+.active{
+      
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/*home*/
+section{
+    padding: 20px;
+
+}
+#home p{
+    color: aliceblue;
+}
+#home h1{
+    color: white;
+    text-shadow: 0px 1px 0px #ccc,
+                 0px 2px 0px #ccc,
+                 0px 3px 0px  #ccc,
+                 0px 4px 0px  #ccc;
+                 
+   
+}
+#home{
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) ,url(./organic-spices.jpg);
+    height:90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+#about{
+    padding: 30px;
+}
+#about .about-grid-container{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+#about .about-grid-container img{
+    width: 70%;
+}
+.about-div1,.about-div2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.about-div2{
+    align-items: flex-start;
+}
+
+
+
+#about a{
+    color: black;
+}
+
+#product{
+
+}
+#product .prouct-grid-container{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+gap:10px;
+}
+#product .prouct-grid-container .box{
+    background-color:rgba(0, 0, 0, 0.644);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    color: azure;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#product .prouct-grid-container .box img{
+    width: 100%;
+}
+
+#contact{
+
+}
+#contact .contaict-container{
+
+}
+#footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: black;
+    color: antiquewhite;
+    text-align: center;
+}
+
+@media(max-width:991px){
+    .navbar{
+        padding: 10px 3rem;
+    }
+    .nav-dropdown-icon{
+       display: block;
+    }
+    .dropdown-nav{
+        display: block;
+        width: 100%;
+    }
+    .active{
+        transition: .5s;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .btn-sign-in{
+        display: none;
+
+    }
+
+    #about .about-grid-container{
+        display: grid;
+        grid-template-columns: 1fr;
+     }
+
+}
